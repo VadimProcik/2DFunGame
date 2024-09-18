@@ -6,6 +6,12 @@ public class Worker : MonoBehaviour
 {
 
     bool isSelected;
+    public LayerMask resourceLayer;
+    public float collectDistance;
+    Resource currentResource;
+    public float timeBetweenCollect;
+    float nextCollectTime;
+    public int collectAmount;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +28,24 @@ public class Worker : MonoBehaviour
             mousePos.z = 0;
 
             transform.position = mousePos;
+        } else 
+        {
+            Collider2D col = Physics2D.OverlapCircle(transform.position, collectDistance, resourceLayer);
+            if (col != null && currentResource == null)
+            {
+                currentResource = col.GetComponent<Resource>();
+            }else{
+                currentResource = null;
+            }
+
+            if(currentResource != null)
+            {
+                if (Time.time > nextCollectTime)
+                {
+                    nextCollectTime = Time.time + timeBetweenCollect;
+                    currentResource.resourceAmount -= collectAmount;
+                }
+            }
         }
     }
 

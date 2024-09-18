@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Resource : MonoBehaviour
 {
+
+    public int resourceAmount;
+    public string resourceType; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +17,9 @@ public class Resource : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (resourceAmount <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

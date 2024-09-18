@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 222dc9a170473374a973703712db2ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceAmount: 20
+  resourceType: wood
 --- !u!61 &1381637016335971212
 BoxCollider2D:
   m_ObjectHideFlags: 0
