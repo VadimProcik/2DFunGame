@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 4432386908791130023}
   - component: {fileID: 8584680902287420425}
   - component: {fileID: 6035062415431542516}
+  - component: {fileID: 3979544651697219752}
   m_Layer: 7
   m_Name: Worker
   m_TagString: Human
@@ -297,3 +298,21 @@ MonoBehaviour:
   collectDistance: 0.2
   timeBetweenCollect: 0.5
   collectAmount: 2
+--- !u!114 &3979544651697219752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7549877763516804731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7fe247a9092b04c98f16ceb35e1653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  collectDistance: 1
+  timeBetweenCollect: 1
+  collectAmount: 1
